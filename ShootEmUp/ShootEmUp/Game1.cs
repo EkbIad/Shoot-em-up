@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
 
 namespace ShootEmUp
 {
@@ -11,6 +13,20 @@ namespace ShootEmUp
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D player;
+        Rectangle playerRect;
+        Color color;
+        Texture2D bushTexture;
+        Rectangle bushRect;
+        
+
+        float speed;
+        Vector2 dir;
+        float scale = 0.3f;
+        float rotation;
+        Vector2 dirToLook;
+        Vector2 position;
+        
 
         public Game1()
         {
@@ -29,7 +45,20 @@ namespace ShootEmUp
             // TODO: Add your initialization logic here
 
             base.Initialize();
-        }
+         
+            IsMouseVisible = true;
+            playerRect = player.Bounds;
+            speed = 600;
+            position = new Vector2(200, 200);
+
+
+
+            playerRect.Size = (playerRect.Size.ToVector2() * scale).ToPoint();
+            bushRect = bushTexture.Bounds;
+            rotation = 0;
+
+
+        }   
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -41,6 +70,10 @@ namespace ShootEmUp
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            player = Content.Load<Texture2D>("player");
+            bushTexture = Content.Load<Texture2D>("bush");
+
+
         }
 
         /// <summary>
@@ -63,6 +96,46 @@ namespace ShootEmUp
                 Exit();
 
             // TODO: Add your update logic here
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float pixelsToMove = speed * deltaTime;
+            dir = new Vector2();
+            MouseState mouseState = Mouse.GetState();
+            position = playerRect.Location.ToVector2();
+            dirToLook = mouseState.Position.ToVector2() - position;
+
+            KeyboardState keyPress = Keyboard.GetState();
+            if (keyPress.IsKeyDown(Keys.D))
+            {
+                dir = new Vector2(1, 0);
+            }
+            if (keyPress.IsKeyDown(Keys.A))
+            {
+                dir = new Vector2(-1, 0);
+            }
+            if (keyPress.IsKeyDown(Keys.W))
+            {
+                dir.Y = -1;
+            }
+            if (keyPress.IsKeyDown(Keys.S))
+            {
+                dir.Y = 1;
+            }
+            if (dir != Vector2.Zero)
+            {
+                dir.Normalize();
+                playerRect.Location += (dir * pixelsToMove).ToPoint();
+            }
+
+            if (playerRect.Intersects(bushRect))
+            {
+                color = Color.Red;
+            }
+            else
+            {
+                color = Color.White;    
+            }
+
+            rotation = (float)Math.Atan2(dirToLook.Y, dirToLook.X);
 
             base.Update(gameTime);
         }
@@ -76,6 +149,10 @@ namespace ShootEmUp
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(player, playerRect, null, color, rotation, new Vector2(player.Bounds.Width/3f, player.Bounds.Height/3f), SpriteEffects.None, 0);
+            spriteBatch.Draw(bushTexture, bushRect, Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
