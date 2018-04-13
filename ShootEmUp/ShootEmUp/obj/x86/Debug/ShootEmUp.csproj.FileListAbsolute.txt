@@ -22,6 +22,7 @@ C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Window
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.exe
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.pdb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\Bush.xnb
+<<<<<<< HEAD
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.exe
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.pdb
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\Bush.xnb
@@ -47,3 +48,6 @@ C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\Administratör.7S696H2\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.csprojResolveAssemblyReference.cache
+=======
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.csprojResolveAssemblyReference.cache
+>>>>>>> 55a5b5129fbdac0f3fcb13aab24429246a563b9a
