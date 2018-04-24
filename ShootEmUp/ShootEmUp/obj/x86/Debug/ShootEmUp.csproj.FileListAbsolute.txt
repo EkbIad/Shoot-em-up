@@ -23,3 +23,4 @@ C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\De
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.pdb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\Bush.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.csprojResolveAssemblyReference.cache
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\bullet.xnb
