@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<<<<<<< HEAD:ShootEmUp/ShootEmUp/Content/obj/Windows/rock.mgcontent
   <SourceFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/rock.png</SourceFile>
   <SourceTime>2018-04-25T14:41:07.7155232+02:00</SourceTime>
   <DestFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/rock.xnb</DestFile>
   <DestTime>2018-05-02T14:36:12.7386652+02:00</DestTime>
+=======
+  <SourceFile>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/Bush.png</SourceFile>
+  <SourceTime>2018-04-10T12:20:11.1589908+02:00</SourceTime>
+  <DestFile>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/Bush.xnb</DestFile>
+  <DestTime>2018-04-10T12:21:45.0785032+02:00</DestTime>
+>>>>>>> 2aa060c87a65a9e78e61f7d6c6d034b981ddf7a3:ShootEmUp/ShootEmUp/Content/obj/Windows/Bush.mgcontent
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
