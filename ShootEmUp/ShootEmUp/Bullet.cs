@@ -21,6 +21,7 @@ namespace ShootEmUp
         Vector2 scale;
         Vector2 offset;
        
+
         
         float damage;
         public Bullet(Vector2 Bulletdir, float bulletSpeed, Texture2D bulletTexture, Vector2 startPosition, float bulletDamage, Rectangle rockRect)
