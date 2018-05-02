@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<<<<<<< HEAD
   <SourceFile>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.jpg</SourceFile>
   <SourceTime>2018-04-10T12:11:15.9690018+02:00</SourceTime>
   <DestFile>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/player.xnb</DestFile>
   <DestTime>2018-05-02T14:38:32.2858634+02:00</DestTime>
+=======
+<<<<<<< HEAD
+  <SourceFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.png</SourceFile>
+  <SourceTime>2018-04-24T10:21:54.6930988+02:00</SourceTime>
+  <DestFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/player.xnb</DestFile>
+  <DestTime>2018-05-02T14:36:12.5040658+02:00</DestTime>
+=======
+  <SourceFile>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.jpg</SourceFile>
+  <SourceTime>2018-04-10T12:20:11.1991292+02:00</SourceTime>
+  <DestFile>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/player.xnb</DestFile>
+  <DestTime>2018-04-10T12:21:45.0480837+02:00</DestTime>
+>>>>>>> 2aa060c87a65a9e78e61f7d6c6d034b981ddf7a3
+>>>>>>> 357f1ec95b1e7438b4fedc9f9c24ad48d754c295
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

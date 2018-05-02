@@ -8,5 +8,15 @@ namespace ShootEmUp
 {
     class Obstacles
     {
+
+
+
+
+
+
+
+
+
+
     }
 }

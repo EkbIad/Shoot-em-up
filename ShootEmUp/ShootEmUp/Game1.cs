@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ShootEmUp
 {
@@ -18,15 +19,19 @@ namespace ShootEmUp
         Color color;
         Texture2D bushTexture;
         Rectangle bushRect;
+        Vector2 bulletScale;
         
-
         float speed;
         Vector2 dir;
         float scale = 0.3f;
         float rotation;
         Vector2 dirToLook;
         Vector2 position;
-        
+        float attackTimer;
+        float attackSpeed;
+        float bulletSpeed;
+
+        List<Bullet> bullets;
 
         public Game1()
         {
@@ -56,7 +61,11 @@ namespace ShootEmUp
             playerRect.Size = (playerRect.Size.ToVector2() * scale).ToPoint();
             bushRect = bushTexture.Bounds;
             rotation = 0;
-
+            attackSpeed = 0.25f;
+            attackTimer = 0;
+            bulletSpeed = 1000;
+            bullets = new List<Bullet>();
+            bulletScale = new Vector2(0.2f, 0.2f);
 
         }   
 
@@ -72,6 +81,8 @@ namespace ShootEmUp
             // TODO: use this.Content to load your game content here
             player = Content.Load<Texture2D>("player");
             bushTexture = Content.Load<Texture2D>("bush");
+            TextureLibrary.LoadTexture(Content,"bullet");
+           
 
 
         }
@@ -97,13 +108,26 @@ namespace ShootEmUp
 
             // TODO: Add your update logic here
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            attackTimer += deltaTime;
             float pixelsToMove = speed * deltaTime;
             dir = new Vector2();
+            
             MouseState mouseState = Mouse.GetState();
             position = playerRect.Location.ToVector2();
             dirToLook = mouseState.Position.ToVector2() - position;
+           
 
             KeyboardState keyPress = Keyboard.GetState();
+            if(mouseState.LeftButton == ButtonState.Pressed && attackTimer >= attackSpeed)
+            {
+                Debug.Print("Yo");
+                attackTimer = 0;
+                bullets.Add(new Bullet(dirToLook, bulletSpeed, TextureLibrary.GetTexture("bullet"), position));
+            }
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                bullets[i].Update(deltaTime);
+            }
             if (keyPress.IsKeyDown(Keys.D))
             {
                 dir = new Vector2(1, 0);
@@ -151,6 +175,10 @@ namespace ShootEmUp
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             spriteBatch.Draw(player, playerRect, null, color, rotation, new Vector2(player.Bounds.Width/3f, player.Bounds.Height/3f), SpriteEffects.None, 0);
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                bullets[i].Draw(spriteBatch);
+            }
             spriteBatch.Draw(bushTexture, bushRect, Color.White);
             spriteBatch.End();
 
