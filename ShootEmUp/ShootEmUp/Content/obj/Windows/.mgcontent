@@ -4,8 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/Bush.png</File>
+<<<<<<< HEAD
     <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bullet.png</File>
     <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.png</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background.jpg</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/rock.png</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background2.jpg</File>
+=======
+    <File>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.jpg</File>
+    <File>C:/Users/Administratör.7S696H2/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/Bush.png</File>
+>>>>>>> 2aa060c87a65a9e78e61f7d6c6d034b981ddf7a3
   </SourceFiles>
 </SourceFileCollection>
