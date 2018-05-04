@@ -10,33 +10,46 @@ namespace ShootEmUp
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D player;
         Rectangle playerRect;
         Color color;
-        Texture2D bushTexture;
-        Rectangle bushRect;
+        Texture2D rockTexture;
+        Rectangle rockRect;
+        Texture2D background1;
+        Texture2D background2;
         Vector2 bulletScale;
-        
+        Vector2 rockPos;
+        Vector2 playerPos;
+        Vector2 playerOffset;
+
         float speed;
         Vector2 dir;
-        float scale = 0.3f;
+        float scale = 0.15f;
         float rotation;
         Vector2 dirToLook;
         Vector2 position;
+        static Color rockColor;
         float attackTimer;
         float attackSpeed;
         float bulletSpeed;
+        float bulletDamage;
+        BackgroundManager backgroundManager = new BackgroundManager();
+        float backgroundSpeed;
+        float rockHealth;
+        Vector2 rockScale;
 
-        List<Bullet> bullets;
+        static List<Bullet> bullets;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferWidth = 1920;
         }
 
         /// <summary>
@@ -50,24 +63,32 @@ namespace ShootEmUp
             // TODO: Add your initialization logic here
 
             base.Initialize();
-         
+
             IsMouseVisible = true;
             playerRect = player.Bounds;
             speed = 600;
             position = new Vector2(200, 200);
 
 
-
-            playerRect.Size = (playerRect.Size.ToVector2() * scale).ToPoint();
-            bushRect = bushTexture.Bounds;
+            rockPos = new Vector2(100, 100);
+            playerPos = new Vector2(0, 0);
+            playerOffset = player.Bounds.Size.ToVector2() * 0.5f;
+            rockRect = rockTexture.Bounds;
+            rockRect.Size = (rockTexture.Bounds.Size.ToVector2() * 0.1f).ToPoint();
+            backgroundSpeed = 500;
             rotation = 0;
             attackSpeed = 0.25f;
             attackTimer = 0;
             bulletSpeed = 1000;
+            bulletDamage = 10;
+            rockHealth = 50;
             bullets = new List<Bullet>();
             bulletScale = new Vector2(0.2f, 0.2f);
+            rockScale = new Vector2(0.07f, 0.07f);
+            rockColor = Color.White;
+            backgroundManager.Initialize(new Vector2(-1, 0), background1, background2, new Vector2(0, 0), backgroundSpeed);
 
-        }   
+        }
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -80,13 +101,23 @@ namespace ShootEmUp
 
             // TODO: use this.Content to load your game content here
             player = Content.Load<Texture2D>("player");
-            bushTexture = Content.Load<Texture2D>("bush");
-            TextureLibrary.LoadTexture(Content,"bullet");
-           
+            rockTexture = Content.Load<Texture2D>("rock");
+
+            TextureLibrary.LoadTexture(Content, "bullet");
+            TextureLibrary.LoadTexture(Content, "background");
+            TextureLibrary.LoadTexture(Content, "background2");
+            background1 = Content.Load<Texture2D>("background");
+            background2 = Content.Load<Texture2D>("background2");
+
 
 
         }
 
+        public static void RemoveBullet(Bullet bullet)
+        {
+            bullets.Remove(bullet);
+
+        }
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
@@ -111,18 +142,18 @@ namespace ShootEmUp
             attackTimer += deltaTime;
             float pixelsToMove = speed * deltaTime;
             dir = new Vector2();
-            
+            backgroundManager.Update(deltaTime);
             MouseState mouseState = Mouse.GetState();
-            position = playerRect.Location.ToVector2();
-            dirToLook = mouseState.Position.ToVector2() - position;
-           
+            dirToLook = mouseState.Position.ToVector2() - playerPos;
+
+
 
             KeyboardState keyPress = Keyboard.GetState();
-            if(mouseState.LeftButton == ButtonState.Pressed && attackTimer >= attackSpeed)
+            if (mouseState.LeftButton == ButtonState.Pressed && attackTimer >= attackSpeed)
             {
                 Debug.Print("Yo");
                 attackTimer = 0;
-                bullets.Add(new Bullet(dirToLook, bulletSpeed, TextureLibrary.GetTexture("bullet"), position));
+                bullets.Add(new Bullet(dirToLook, bulletSpeed, TextureLibrary.GetTexture("bullet"), playerPos, bulletDamage, rockRect));
             }
             for (int i = 0; i < bullets.Count; i++)
             {
@@ -147,21 +178,28 @@ namespace ShootEmUp
             if (dir != Vector2.Zero)
             {
                 dir.Normalize();
-                playerRect.Location += (dir * pixelsToMove).ToPoint();
+                playerPos += (dir * pixelsToMove);
+                playerRect.Location = (playerPos - playerOffset * scale).ToPoint();
             }
 
-            if (playerRect.Intersects(bushRect))
+            if (playerRect.Intersects(rockRect))
             {
                 color = Color.Red;
             }
             else
             {
-                color = Color.White;    
+                color = Color.White;
             }
+
 
             rotation = (float)Math.Atan2(dirToLook.Y, dirToLook.X);
 
             base.Update(gameTime);
+        }
+
+        public static void ChangeRockColor(Color color)
+        {
+            rockColor = color;
         }
 
         /// <summary>
@@ -170,16 +208,17 @@ namespace ShootEmUp
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(player, playerRect, null, color, rotation, new Vector2(player.Bounds.Width/3f, player.Bounds.Height/3f), SpriteEffects.None, 0);
+            backgroundManager.Draw(spriteBatch);
+            spriteBatch.Draw(player, playerPos, null, color, rotation + 90 * 0.0174532925f, playerOffset, scale, SpriteEffects.None, 0);
             for (int i = 0; i < bullets.Count; i++)
             {
                 bullets[i].Draw(spriteBatch);
             }
-            spriteBatch.Draw(bushTexture, bushRect, Color.White);
+            spriteBatch.Draw(rockTexture, rockRect, null, rockColor);
             spriteBatch.End();
 
             base.Draw(gameTime);
