@@ -66,6 +66,7 @@ namespace ShootEmUp
         {
             spriteBatch.Draw(texture, position, null, Color.White, 0, offset,scale,SpriteEffects.None, 0);
 
+
         }
 
 
