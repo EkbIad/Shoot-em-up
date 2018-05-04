@@ -36,7 +36,7 @@ namespace ShootEmUp
             texture = bulletTexture;
             position = startPosition;
             scale = new Vector2(0.03f, 0.03f);
-            offset = texture.Bounds.Size.ToVector2() * 0.5f;
+            offset = texture.Bounds.Size.ToVector2() * 0.2f;
             rectangle.Size = (texture.Bounds.Size.ToVector2().ToPoint());
            
 
@@ -65,6 +65,7 @@ namespace ShootEmUp
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position, null, Color.White, 0, offset,scale,SpriteEffects.None, 0);
+
 
         }
 

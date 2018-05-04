@@ -4,10 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bullet.png</File>
-    <File>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.png</File>
-    <File>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background.jpg</File>
-    <File>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/rock.png</File>
-    <File>C:/Users/emir.buzgovic/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background2.jpg</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/player.png</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background.jpg</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/rock.png</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/background2.jpg</File>
+    <File>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bullet.png</File>
   </SourceFiles>
 </SourceFileCollection>
