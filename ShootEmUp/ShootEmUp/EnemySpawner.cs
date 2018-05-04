@@ -10,21 +10,16 @@ using System.Diagnostics;
 
 namespace ShootEmUp
 {
-    class Enemies
+    class EnemySpawner
     {
-        Texture2D rockTexture;
-        Rectangle rockRect;
-        Vector2 rockPos;
-        static Color rockColor;
-        float rockHealth;
-        Vector2 rockScale;
+        //static Random random = new Random();
+        //static List<Enem>
 
-        public void Initialize()
-        {
 
-        }
-            
-        
+        //public void Draw(SpriteBatch spriteBatch)
+        //{
+
+        //}
 
 
 
