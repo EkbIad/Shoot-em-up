@@ -41,7 +41,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Monogame\Shoot em up.cs" />
     <Compile Include="BackgroundManager.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Enemies.cs" />
