@@ -1,4 +1,8 @@
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\background.xnb
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\background2.xnb
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\bullet.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\player.xnb
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\rock.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\ShootEmUp.exe
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\ShootEmUp.pdb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\MonoGame.Framework.dll
@@ -19,8 +23,10 @@ C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Window
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.csprojResolveAssemblyReference.cache
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.exe
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.pdb
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.csprojResolveAssemblyReference.cache
@@ -117,3 +123,5 @@ C:\Users\emir.buzgovic\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\
 =======
 >>>>>>> 2aa060c87a65a9e78e61f7d6c6d034b981ddf7a3
 >>>>>>> 357f1ec95b1e7438b4fedc9f9c24ad48d754c295
+=======
+>>>>>>> 467b5be41d1369d1bdd95d2f8248ff5025182939
