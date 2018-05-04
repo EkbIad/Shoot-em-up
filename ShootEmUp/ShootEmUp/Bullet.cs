@@ -35,7 +35,7 @@ namespace ShootEmUp
             speed = bulletSpeed;
             texture = bulletTexture;
             position = startPosition;
-            scale = new Vector2(0.05f, 0.05f);
+            scale = new Vector2(0.03f, 0.03f);
             offset = texture.Bounds.Size.ToVector2() * 0.5f;
             rectangle.Size = (texture.Bounds.Size.ToVector2().ToPoint());
            
