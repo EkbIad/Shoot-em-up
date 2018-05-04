@@ -1,6 +1,5 @@
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\background.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\background2.xnb
-C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\bullet.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\player.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\rock.xnb
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\ShootEmUp.exe
@@ -25,3 +24,4 @@ C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Window
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.exe
 C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\obj\x86\Debug\ShootEmUp.pdb
+C:\Users\emil.ekblad\Documents\GitHub\Shoot-em-up\ShootEmUp\ShootEmUp\bin\Windows\x86\Debug\Content\bullet.xnb

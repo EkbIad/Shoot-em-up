@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bullet.png</SourceFile>
-  <SourceTime>2018-04-13T12:21:45.6715764+02:00</SourceTime>
+  <SourceTime>2018-05-04T12:34:51.2063599+02:00</SourceTime>
   <DestFile>C:/Users/emil.ekblad/Documents/GitHub/Shoot-em-up/ShootEmUp/ShootEmUp/Content/bin/Windows/bullet.xnb</DestFile>
-  <DestTime>2018-05-04T12:24:47.103154+02:00</DestTime>
+  <DestTime>2018-05-04T12:35:41.0114065+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
